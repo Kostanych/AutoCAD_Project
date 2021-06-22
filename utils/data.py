@@ -67,3 +67,48 @@ def get_dim_info(dxf: list):
     except Exception as e:
         print_exc()
     return df_dimensions, entities, dimensions
+
+
+def find_attachment_point(data):
+    """
+    Converts given data to the coordinates of attachment points.
+    :param data: dataframe with coordinates of lines in layer 'attachment point'
+    :return:
+    """
+    # FindAttachmentPoint(df[df['device']==device])
+    print(f'data:\n{data}')
+    print(data.iloc[[0]])
+
+
+def make_dim_vertical(msp, point1, point2, loc):
+    """
+    Makes vertical dimension.
+    :param msp: model space
+    :param point1: point of dimension
+    :param point2: point of dimension
+    :param loc: location of dimension
+    :return:
+    """
+    pass
+
+
+def make_dim_horizontal(msp, point1, point2, loc):
+    """
+    Makes horizontal dimension.
+    :param msp: model space
+    :param point1: point of dimension
+    :param point2: point of dimension
+    :param loc: location of dimension
+    :return:
+    """
+    pass
+
+
+def process_attachment_points(msp, objects):
+    """
+    Makes coordinates of attachment points.
+    :param msp: model space
+    :param objects: lines from specified layer
+    :return:
+    """
+    pass
