@@ -1,4 +1,3 @@
-import comtypes.client
 
 
 def open_dxf_file(filename="testfile") -> list:
@@ -7,7 +6,7 @@ def open_dxf_file(filename="testfile") -> list:
     :param filename: name of DXF file
     :return: list with all drawing data
     """
-    dxf_file = open(filename + '.dxf', 'r')
+    dxf_file = open(filename + '.DXF', 'r')
     dxf = list(dxf_file)
     dxf_file.close()
 
@@ -16,7 +15,7 @@ def open_dxf_file(filename="testfile") -> list:
     return dxf
 
 
-def make_dxf_file(activedoc, filename: str = "testfile"):
+def make_dxf_file(activedoc, filename: str = "./testfile"):
     """
     Makes DXF file.
     :param activedoc:
